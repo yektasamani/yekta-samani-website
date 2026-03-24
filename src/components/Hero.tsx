@@ -7,18 +7,20 @@ export default function Hero() {
                 <h1 className={styles.name}>Yekta Samani</h1>
                 <p className={styles.subtitle}>Climate Tech · Data · Sustainability</p>
                 <p className={styles.tagline}>
-                    I build tools that connect technology, data, and environmental impact.
+                    I build tools at the intersection of technology, data, and environmental impact.
                 </p>
                 <div className={styles.actions}>
                     <a href="#projects" className={styles.primaryBtn}>
-                        View Projects →
+                        View Projects
                     </a>
                     <a href="/resume.pdf" className={styles.secondaryBtn}>
-                        Download Resume ↓
+                        Download Resume
                     </a>
                 </div>
             </div>
-            <div></div>
+            <div className={styles.rightCol}>
+                <img className={styles.headshot} src="/HeadShot.JPG" />
+            </div>
         </section>
     );
 }
