@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+.navLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navName {
+    font-family: var(--font-playfair-display), serif;
+    font-size: 1.25rem;
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.navLinks a:hover {
+    opacity: 0.6;
+}

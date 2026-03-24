@@ -1,0 +1,111 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    background: var(--background);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 60% 50% at 50% 40%,
+        rgba(34, 197, 94, 0.08) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.content {
+    text-align: center;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #22c55e;
+    font-family: var(--font-geist-mono);
+    font-weight: 500;
+}
+
+.heading {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--foreground);
+}
+
+.subheading {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.65;
+    color: var(--foreground);
+    opacity: 0.6;
+    max-width: 520px;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+    text-decoration: none;
+}
+
+.primaryBtn {
+    background: #22c55e;
+    color: #fff;
+}
+
+.secondaryBtn {
+    border: 1px solid currentColor;
+    color: var(--foreground);
+    opacity: 0.7;
+}
+
+.primaryBtn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.secondaryBtn:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        text-align: center;
+    }
+}
