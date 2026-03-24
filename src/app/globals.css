@@ -1,18 +1,11 @@
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --forest-green: #234b3a;
-        --artichoke: #8faf8f;
-        --mint: #cfe6d5;
-        --persian-blue: #1f5a7a;
-        --terracotta: #c77a4a;
-        --cream: #f5f0e8;
-        --gold: #c9a96a;
-    }
+    --forest-green: #234b3a;
+    --artichoke: #8faf8f;
+    --mint: #cfe6d5;
+    --persian-blue: #1f5a7a;
+    --terracotta: #c77a4a;
+    --cream: #f5f0e8;
+    --gold: #c9a96a;
 }
 
 html,
@@ -44,10 +37,4 @@ h3 {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
 }
