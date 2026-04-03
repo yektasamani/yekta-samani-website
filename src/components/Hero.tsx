@@ -19,7 +19,7 @@ export default function Hero() {
                 </div>
             </div>
             <div className={styles.rightCol}>
-                <img className={styles.headshot} src="/HeadShot.JPG" />
+                <img className={styles.headshot} src="/headshot.jpg" />
             </div>
         </section>
     );
