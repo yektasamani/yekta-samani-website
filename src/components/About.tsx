@@ -20,13 +20,9 @@ export default function About() {
                     </div>
                 </div>
                 <div className={styles.rightCol}>
-                    <Image
-                        src="/tile.png"
-                        alt="tile"
-                        className={styles.tile}
-                        width={2000}
-                        height={2000}
-                    />
+                    <div className={styles.tileWrapper}>
+                        <Image src="/tile.png" alt="Persian tile" fill className={styles.tile} />
+                    </div>
                 </div>
             </div>
         </section>

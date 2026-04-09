@@ -25,8 +25,8 @@ export default function Hero() {
                     src="/headshot.jpg"
                     alt="headshot"
                     className={styles.headshot}
-                    width={1000}
-                    height={1000}
+                    width={460}
+                    height={700}
                 />
             </div>
         </section>
