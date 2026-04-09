@@ -10,8 +10,8 @@ export default function Hero() {
                     I build tools at the intersection of technology, data, and environmental impact.
                 </p>
                 <div className={styles.actions}>
-                    <a href="#projects" className={styles.primaryBtn}>
-                        View Projects
+                    <a href="#experience" className={styles.primaryBtn}>
+                        View Experience
                     </a>
                     <a href="/resume.pdf" className={styles.secondaryBtn}>
                         Download Resume

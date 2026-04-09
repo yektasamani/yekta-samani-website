@@ -1,8 +1,29 @@
+"use client";
 import styles from "./Footer.module.css";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
+import { useState } from "react";
 export default function Footer() {
+    const [submitted, setSubmitted] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+
+    const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const data = new FormData(form);
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: data,
+        });
+        if (response.ok) {
+            setShowToast(true);
+            form.reset();
+            setTimeout(() => setShowToast(false), 3000);
+        }
+    };
     return (
+        <section id="contact">
         <footer className={styles.footer}>
             <div className={styles.tileBar} />
             <div className={styles.footerContent}>
@@ -24,10 +45,30 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className={styles.rightCol}>
-                    <form className={styles.form}>
-                        <input type="text" placeholder="Name" className={styles.input} />
-                        <input type="email" placeholder="Email" className={styles.input} />
-                        <textarea placeholder="Message" className={styles.textarea} />
+                    <form className={styles.form} onSubmit={handleSubmit}>
+                        <input
+                            type="hidden"
+                            name="access_key"
+                            value="db6a819a-c925-4321-9ede-00052860947e"
+                        />
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            className={styles.input}
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            className={styles.input}
+                        />
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            className={styles.textarea}
+                        />
                         <button type="submit" className={styles.submitBtn}>
                             Send
                         </button>
@@ -46,6 +87,8 @@ export default function Footer() {
             <div className={styles.footerContent}>
                 <p className={styles.copyright}>© 2026 Yekta Samani. All rights reserved.</p>
             </div>
+            {showToast && <div className={styles.toast}>Thanks! I'll be in touch soon.</div>}
         </footer>
+        </section>
     );
 }
