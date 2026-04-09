@@ -1,4 +1,5 @@
 import styles from "./About.module.css";
+import Image from "next/image";
 export default function About() {
     return (
         <section id="about" className={styles.about}>
@@ -7,7 +8,7 @@ export default function About() {
             </div>
             <div className={styles.sectionContent}>
                 <div className={styles.leftCol}>
-                    <p>
+                    <p className={styles.bio}>
                         I'm a software engineer with a passion for building tools that help people
                         live better lives.
                     </p>
@@ -19,7 +20,13 @@ export default function About() {
                     </div>
                 </div>
                 <div className={styles.rightCol}>
-                    <img src="/tile.png" className={styles.tile} />
+                    <Image
+                        src="/tile.png"
+                        alt="tile"
+                        className={styles.tile}
+                        width={2000}
+                        height={2000}
+                    />
                 </div>
             </div>
         </section>

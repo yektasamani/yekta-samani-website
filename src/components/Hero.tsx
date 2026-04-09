@@ -1,4 +1,6 @@
 import styles from "./Hero.module.css";
+import Image from "next/image";
+
 export default function Hero() {
     return (
         <section className={styles.hero}>
@@ -19,7 +21,13 @@ export default function Hero() {
                 </div>
             </div>
             <div className={styles.rightCol}>
-                <img className={styles.headshot} src="/headshot.jpg" />
+                <Image
+                    src="/headshot.jpg"
+                    alt="headshot"
+                    className={styles.headshot}
+                    width={1000}
+                    height={1000}
+                />
             </div>
         </section>
     );
