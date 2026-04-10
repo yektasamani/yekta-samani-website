@@ -105,8 +105,77 @@
     font-size: 0.85rem;
 }
 
+.vineCol {
+    display: contents;
+}
+
 .vine {
     width: 100%;
     padding: 0 8rem;
     transition: clip-path 0.3s ease;
+}
+
+.responsiveContainer {
+    display: contents;
+}
+
+@media (max-width: 768px) {
+    .responsiveContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .responsiveContainer .scrollWrapper {
+        flex: 1;
+        flex-direction: column;
+        overflow-x: visible;
+        padding: 1rem 1rem 1rem 0;
+        gap: 3rem;
+    }
+
+    .experience {
+        min-height: auto;
+    }
+
+    .stickyContainer {
+        position: static;
+        height: auto;
+        overflow: visible;
+    }
+
+    .card {
+        min-width: 100%;
+        border-left: none;
+        border-top: 2px solid var(--gold);
+        padding-top: 2rem;
+    }
+
+    .sectionTitle {
+        padding: 0 2rem;
+    }
+
+    .vineCol {
+        display: block;
+        width: 30px;
+        align-self: stretch;
+        overflow: hidden;
+        flex-shrink: 0;
+        order: -1;
+        position: relative;
+    }
+
+    .vine {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left center;
+        padding: 0;
+        transition: clip-path 0.3s ease;
+    }
 }

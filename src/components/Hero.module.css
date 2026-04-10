@@ -100,3 +100,30 @@
     border-radius: 4rem;
     border: 2px solid var(--gold);
 }
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 1rem 2rem;
+        align-items: center;
+    }
+
+    .leftCol {
+        padding-top: 6rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rightCol {
+        align-items: center;
+    }
+
+    .headshot {
+        width: 50%;
+        height: auto;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+}

@@ -126,3 +126,17 @@
     font-size: 0.95rem;
     z-index: 100;
 }
+
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column;
+        padding: 0 2rem;
+        gap: 2rem;
+    }
+    .leftCol {
+        border-right: none;
+        border-bottom: 1px solid var(--gold);
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+}
