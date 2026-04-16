@@ -97,7 +97,7 @@
     border: 2px solid var(--gold);
 }
 
-@media (max-width: 768) {
+@media (max-width: 768px) {
     .about {
         padding: 2rem;
     }
