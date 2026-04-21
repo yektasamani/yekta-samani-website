@@ -10,25 +10,45 @@ export default function Experience() {
 
     const steps = [
         {
+            date: "September 2025 — Present",
+            title: "Product Analyst",
+            company: "Boundless Impact Research & Analytics",
+            description: `At Boundless, I work at the intersection of the development, 
+            research, and marketing teams, contributing both to product strategy and development. 
+            I work across the full product lifecycle, from gathering customer feedback and translating
+            user research into feature specifications, to prototyping and testing new features, 
+            and collaborating with leadership on prioritization and technical presentations. 
+            I write and maintain Python tools and data pipelines for Life Cycle Assessment (LCA)
+             and Techno-Economic Analysis, and contribute to the full-stack interactive platform.`,
+            tags: [
+                "Product Development",
+                "Full-Stack Development",
+                "Python",
+                "PostgreSQL",
+                "Data Pipelines",
+                "Sustainability Platform",
+            ],
+        },
+        {
+            date: "September 2024 — September 2025",
+            title: "Research Associate",
+            company: "Boundless Impact Research & Analytics",
+            description: `At Boundless, I designed and built a relational PostgreSQL database
+             to migrate 8,000+ Environmental Key Performance Indicators (EKPIs) from Google Sheets, 
+             structured for data analysis, QA/QC, and product integration. I also developed a Retool 
+             application for internal use, enabling the research team to query and explore environmental
+              and cost data. Beyond technical work, I supported intern onboarding and training, 
+              maintained data consistency across industries and technologies, and collaborated 
+              across the research and product teams to translate environmental analysis into backend logic.
+`,
+            tags: ["PostgreSQL", "Data Modeling", "Data QA/QC", "Retool"],
+        },
+        {
             date: "2020 — 2024",
             title: "B.S. Computer Science",
             company: "Cornell University",
             description: "Description",
             tags: ["Python", "Data Structures", "Software Engineering"],
-        },
-        {
-            date: "2024 — 2025",
-            title: "Research Associate",
-            company: "Boundless",
-            description: "Description",
-            tags: ["LCA", "Sustainability Metrics", "Data Validation"],
-        },
-        {
-            date: "2025 — Present",
-            title: "Product Analyst",
-            company: "Boundless",
-            description: "Description",
-            tags: ["Product Strategy", "Sustainability", "Cross-functional"],
         },
     ];
 
