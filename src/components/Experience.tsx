@@ -44,11 +44,31 @@ export default function Experience() {
             tags: ["PostgreSQL", "Data Modeling", "Data QA/QC", "Retool"],
         },
         {
-            date: "2020 — 2024",
-            title: "B.S. Computer Science",
-            company: "Cornell University",
-            description: "Description",
-            tags: ["Python", "Data Structures", "Software Engineering"],
+            date: "January 2022 — May 2024",
+            title: "Developer - Team Lead",
+            company:
+                "Cornell University Sustainable Design CUSD - Alternative Recycling Cornell (ARC)",
+            description: `Joined as a developer and became Team Lead in May 2022,
+             leading the full-stack mobile app development team building in 
+             React Native with cloud infrastructure and mentoring junior developers
+              on best practices and collaborative workflows.`,
+            tags: ["React Native", "Cloud Infrastructure", "Full-Stack", "Team Lead"],
+        },
+        {
+            date: "June 2023 — September 2023",
+            title: "Visiting Research Intern",
+            company: "Columbia University",
+            description: `Developed neural networks for computational imaging 
+            systems, focusing on reconstructing images from indirect measurements.`,
+            tags: ["Neural Networks", "Python", "Convolutional Neural Networks"],
+        },
+        {
+            date: "June 2022 — August 2022",
+            title: "Software Engineering Intern",
+            company: "Ai Trillium Inc",
+            description: `Developed POSIX bash scripts to automate GitHub 
+            operations across nested repositories and wrote technical documentation in Markdown.`,
+            tags: ["Bash", "Git Automation", "DevOps"],
         },
     ];
 
