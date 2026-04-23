@@ -25,10 +25,11 @@
 .scrollWrapper::-webkit-scrollbar {
     display: none;
 }
+
 .sectionTitle {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
     padding: 0 8rem;
     margin-bottom: 2rem;
@@ -36,23 +37,22 @@
 
 .sectionTitle span {
     font-family: var(--font-playfair-display), serif;
+
     font-size: 2rem;
     font-weight: 700;
     color: var(--gold);
     white-space: nowrap;
 }
 
-.sectionTitle::before {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--gold);
-}
+.sectionTitle::before,
 .sectionTitle::after {
     content: "";
     flex: 1;
-    height: 1px;
-    background: var(--gold);
+    height: 32px;
+    background-image: url("/tile.png");
+    background-size: auto 32px;
+    background-repeat: repeat-x;
+    opacity: 0.4;
 }
 
 .card {
@@ -157,6 +157,10 @@
         padding: 0 2rem;
     }
 
+    .sectionTitle span {
+        font-size: 1.5rem;
+    }
+
     .vineCol {
         display: block;
         width: 30px;
@@ -177,5 +181,16 @@
         object-position: left center;
         padding: 0;
         transition: clip-path 0.3s ease;
+    }
+
+    .sectionTitle::before,
+    .sectionTitle::after {
+        content: "";
+        flex: 1;
+        height: 24px;
+        background-image: url("/tile.png");
+        background-size: auto 24px;
+        background-repeat: repeat-x;
+        opacity: 0.4;
     }
 }
