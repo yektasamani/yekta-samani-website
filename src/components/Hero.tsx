@@ -22,7 +22,7 @@ export default function Hero() {
             </div>
             <div className={styles.rightCol}>
                 <Image
-                    src="/headshot.jpg"
+                    src="/HeadShot.JPG"
                     alt="headshot"
                     className={styles.headshot}
                     width={460}
