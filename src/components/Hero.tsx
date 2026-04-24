@@ -15,7 +15,7 @@ export default function Hero() {
                     <a href="#experience" className={styles.primaryBtn}>
                         View Experience
                     </a>
-                    <a href="/yektasaamni_resume.pdf" className={styles.secondaryBtn}>
+                    <a href="/yektasamani_resume.pdf" className={styles.secondaryBtn}>
                         Download Resume
                     </a>
                 </div>
