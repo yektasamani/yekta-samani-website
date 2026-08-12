@@ -1,196 +1,175 @@
 .experience {
     background: var(--cream);
-    min-height: 100vh;
+    padding: 60px 24px 10px;
 }
 
-.stickyContainer {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.scrollWrapper {
-    display: flex;
-    flex-direction: row;
-    overflow-x: hidden;
-    gap: 2rem;
-    padding: 2rem 8rem;
-    scrollbar-width: none;
-}
-
-.scrollWrapper::-webkit-scrollbar {
-    display: none;
-}
-
-.sectionTitle {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%;
-    padding: 0 8rem;
-    margin-bottom: 2rem;
-}
-
-.sectionTitle span {
+.banner {
+    text-align: center;
+    margin: 36px auto 60px;
     font-family: var(--font-playfair-display), serif;
-
-    font-size: 2rem;
     font-weight: 700;
-    color: var(--gold);
-    white-space: nowrap;
+    font-size: 2.2rem;
+    color: var(--forest-green);
+    position: relative;
+    padding: 14px 0;
 }
 
-.sectionTitle::before,
-.sectionTitle::after {
+.banner::before,
+.banner::after {
     content: "";
-    flex: 1;
-    height: 32px;
-    background-image: url("/tile.png");
-    background-size: auto 32px;
-    background-repeat: repeat-x;
-    opacity: 0.4;
+    position: absolute;
+    top: 50%;
+    width: 32%;
+    height: 14px;
+    background-image: radial-gradient(circle, var(--artichoke) 1.4px, transparent 1.6px);
+    background-size: 10px 10px;
+    opacity: 0.5;
+    transform: translateY(-50%);
 }
 
-.card {
-    min-width: 60vw;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem;
-    border-left: 2px solid var(--gold);
+.banner::before {
+    left: 0;
+}
+.banner::after {
+    right: 0;
 }
 
-.date {
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    color: var(--artichoke);
+/* ---------- Vine timeline ---------- */
+.vineWrap {
+    /* distance from a card's inner edge to the vine's center line */
+    --gap: 56px;
+    /* half the leaf marker's width (leaf is 30px) */
+    --leaf-half: 15px;
+
+    max-width: 900px;
+    margin: 0 auto 40px;
+    position: relative;
+    padding: 10px 0 60px;
+}
+
+.vineSvg {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    transform: translateX(-50%);
+    overflow: visible;
+    z-index: 0;
+}
+
+.vItem {
+    position: relative;
+    width: calc(50% - var(--gap));
+    z-index: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 24px 28px 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 24px;
+}
+
+/* odd = left column: spans 0 -> (50% - gap) */
+.vItem:nth-of-type(odd) {
+    margin-left: 0;
+}
+
+/* even = right column: spans (50% + gap) -> 100% */
+.vItem:nth-of-type(even) {
+    margin-left: calc(50% + var(--gap));
+}
+
+.leafMarker {
+    position: absolute;
+    top: -2px;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+
+/* push the leaf across the gap so its centre sits on the vine */
+.vItem:nth-of-type(odd) .leafMarker {
+    left: auto;
+    right: calc(-1 * var(--gap) - var(--leaf-half));
+}
+
+.vItem:nth-of-type(even) .leafMarker {
+    right: auto;
+    left: calc(-1 * var(--gap) - var(--leaf-half));
+}
+
+.vDate {
+    color: var(--gold);
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
+    margin-bottom: 4px;
+    font-weight: 500;
 }
 
-.title {
-    font-size: 1.8rem;
-    font-weight: 700;
+.vRole {
+    font-family: var(--font-playfair-display), serif;
+    color: var(--forest-green);
+    font-size: 1.2rem;
+    margin: 0 0 2px;
+}
+
+.vOrg {
+    color: var(--forest-green);
+    font-weight: 600;
+    font-size: 0.86rem;
+    margin-bottom: 9px;
+    font-style: italic;
+}
+
+.vDesc {
+    font-size: 0.88rem;
+    line-height: 1.6;
     color: var(--forest-green);
 }
 
-.company {
-    font-size: 1rem;
-    color: var(--artichoke);
-}
-
-.description {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--forest-green);
-    opacity: 0.8;
-    max-width: 520px;
-}
-
-.tags {
+.vTags {
+    margin-top: 10px;
     display: flex;
+    gap: 6px;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 0.5rem;
 }
 
-.tag {
-    padding: 0.4rem 1rem;
-    border-radius: 2rem;
+.vTag {
     background: var(--mint);
+    border: 1px solid var(--artichoke);
     color: var(--forest-green);
-    font-size: 0.85rem;
+    font-size: 0.7rem;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 500;
 }
 
-.vineCol {
-    display: contents;
+.endSprig {
+    text-align: center;
+    margin-top: -30px;
 }
 
-.vine {
-    width: 100%;
-    padding: 0 8rem;
-    transition: clip-path 0.3s ease;
-}
-
-.responsiveContainer {
-    display: contents;
-}
-
-@media (max-width: 768px) {
-    .responsiveContainer {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        gap: 1rem;
-        padding: 0 1rem;
+/* ---------- Mobile: single column, vine on the left ---------- */
+@media (max-width: 720px) {
+    .vineSvg {
+        left: 22px;
+        transform: none;
+        width: 44px;
     }
 
-    .responsiveContainer .scrollWrapper {
-        flex: 1;
-        flex-direction: column;
-        overflow-x: visible;
-        padding: 1rem 1rem 1rem 0;
-        gap: 3rem;
+    /* vine centre lands at 44px from the wrap's left edge */
+    .vItem,
+    .vItem:nth-of-type(odd),
+    .vItem:nth-of-type(even) {
+        width: calc(100% - 76px);
+        margin-left: 76px;
+        padding: 20px;
     }
 
-    .experience {
-        min-height: auto;
-    }
-
-    .stickyContainer {
-        position: static;
-        height: auto;
-        overflow: visible;
-    }
-
-    .card {
-        min-width: 100%;
-        border-left: none;
-        border-top: 2px solid var(--gold);
-        padding-top: 2rem;
-    }
-
-    .sectionTitle {
-        padding: 0 2rem;
-    }
-
-    .sectionTitle span {
-        font-size: 1.5rem;
-    }
-
-    .vineCol {
-        display: block;
-        width: 30px;
-        align-self: stretch;
-        overflow: hidden;
-        flex-shrink: 0;
-        order: -1;
-        position: relative;
-    }
-
-    .vine {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: left center;
-        padding: 0;
-        transition: clip-path 0.3s ease;
-    }
-
-    .sectionTitle::before,
-    .sectionTitle::after {
-        content: "";
-        flex: 1;
-        height: 24px;
-        background-image: url("/tile.png");
-        background-size: auto 24px;
-        background-repeat: repeat-x;
-        opacity: 0.4;
+    .vItem:nth-of-type(odd) .leafMarker,
+    .vItem:nth-of-type(even) .leafMarker {
+        right: auto;
+        left: -47px;
     }
 }
