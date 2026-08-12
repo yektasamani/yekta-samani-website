@@ -26,6 +26,7 @@ export default function About() {
                     matter.
                 </p>
                 <div className={styles.tags}>
+                    <span className={styles.tag}>Product Management</span>
                     <span className={styles.tag}>Software Engineering</span>
                     <span className={styles.tag}>Data Science</span>
                     <span className={styles.tag}>Climate & Sustainability</span>
