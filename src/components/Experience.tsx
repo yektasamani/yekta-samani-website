@@ -64,7 +64,9 @@ function LeafMarker() {
 export default function Experience() {
     return (
         <section id="experience" className={styles.experience}>
-            <div className={styles.banner}>Experience</div>
+            <div className={styles.sectionTitle}>
+                <span>Experience</span>
+            </div>
 
             <div className={styles.vineWrap}>
                 <svg className={styles.vineSvg} viewBox="0 0 60 900" preserveAspectRatio="none">

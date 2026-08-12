@@ -3,35 +3,32 @@
     padding: 60px 24px 10px;
 }
 
-.banner {
-    text-align: center;
-    margin: 36px auto 60px;
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+
+.sectionTitle span {
     font-family: var(--font-playfair-display), serif;
+    font-size: 2rem;
     font-weight: 700;
-    font-size: 2.2rem;
-    color: var(--forest-green);
-    position: relative;
-    padding: 14px 0;
+    color: var(--gold);
+    white-space: nowrap;
 }
 
-.banner::before,
-.banner::after {
+.sectionTitle::before,
+.sectionTitle::after {
     content: "";
-    position: absolute;
-    top: 50%;
-    width: 32%;
-    height: 14px;
-    background-image: radial-gradient(circle, var(--artichoke) 1.4px, transparent 1.6px);
-    background-size: 10px 10px;
-    opacity: 0.5;
-    transform: translateY(-50%);
-}
-
-.banner::before {
-    left: 0;
-}
-.banner::after {
-    right: 0;
+    flex: 1;
+    height: 32px;
+    background-image: url("/tile.png");
+    background-size: auto 32px;
+    background-repeat: repeat-x;
+    opacity: 0.4;
 }
 
 /* ---------- Vine timeline ---------- */
@@ -152,6 +149,15 @@
 
 /* ---------- Mobile: single column, vine on the left ---------- */
 @media (max-width: 720px) {
+    .sectionTitle span {
+        font-size: 1.5rem;
+    }
+
+    .sectionTitle::before,
+    .sectionTitle::after {
+        height: 24px;
+        background-size: auto 24px;
+    }
     .vineSvg {
         left: 22px;
         transform: none;
