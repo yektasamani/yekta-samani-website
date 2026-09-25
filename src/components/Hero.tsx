@@ -7,9 +7,10 @@ export default function Hero() {
             <div className={styles.leftCol}>
                 <p className={styles.greeting}>Hi, I'm</p>
                 <h1 className={styles.name}>Yekta Samani</h1>
-                <p className={styles.subtitle}>Climate Tech · Data · Sustainability</p>
+                <p className={styles.subtitle}>Product · Data · Climate Tech · Sustainability</p>
                 <p className={styles.tagline}>
-                    I build tools at the intersection of technology, data, and environmental impact.
+                    Currently building tools at the intersection of technology, data, and
+                    sustainability.
                 </p>
                 <div className={styles.actions}>
                     <a href="#experience" className={styles.primaryBtn}>
