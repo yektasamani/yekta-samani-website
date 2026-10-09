@@ -2,6 +2,8 @@
 import styles from "./Footer.module.css";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
+import { navLinks } from "./navLinks";
 import { useState } from "react";
 export default function Footer() {
     const [showToast, setShowToast] = useState(false);
@@ -74,7 +76,7 @@ export default function Footer() {
                         </form>
                     </div>
                 </div>
-                <div className={styles.logo}>
+                <Link href="/" className={styles.logo}>
                     <Image
                         src="/logo.png"
                         alt="YS logo"
@@ -82,7 +84,14 @@ export default function Footer() {
                         height={60}
                         className={styles.logoImg}
                     />
-                </div>
+                </Link>
+                <ul className={styles.footerNav}>
+                    {navLinks.map((link) => (
+                        <li key={link.href}>
+                            <Link href={link.href}>{link.label}</Link>
+                        </li>
+                    ))}
+                </ul>
                 <div className={styles.footerContent}>
                     <p className={styles.copyright}>© 2026 Yekta Samani. All rights reserved.</p>
                 </div>
